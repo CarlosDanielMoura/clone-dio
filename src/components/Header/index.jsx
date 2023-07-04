@@ -3,10 +3,8 @@ import {
     Wrapper,
     BuscarInputContainer,
     Input,
-    Column,
     Row,
     MenuRight,
-    Menu,
     UserPicture,
 } from "./styles";
 

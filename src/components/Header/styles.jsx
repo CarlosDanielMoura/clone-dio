@@ -55,7 +55,7 @@ export const Menu = styled.a`
 export const MenuRight = styled.a`
     font-family: "Open Sans", sans-serif;
     font-style: normal;
-    font-size: 12px;
+    font-size: 16px;
     line-height: 25px;
     color: #fff;
     margin-right: 12px;
