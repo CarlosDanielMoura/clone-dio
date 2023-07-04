@@ -11,7 +11,7 @@ import {
 import Button from "../../components/Button";
 import Banner from "../../assets/banner-homer.png";
 
-function App() {
+function Home() {
     return (
         <Container>
             <Header pag="Home" />
@@ -27,7 +27,11 @@ function App() {
                         profissional, evoluindo em comunidade com os melhores
                         experts.
                     </Paragraph>
-                    <Button title="Começar agora" variant="secudary" />
+                    <Button
+                        title="Começar agora"
+                        variant="secudary"
+                        onClick={() => null}
+                    />
                 </ContainerLeft>
                 <ContainerRight>
                     <img src={Banner} alt="Banner da home com feedback" />
@@ -37,4 +41,4 @@ function App() {
     );
 }
 
-export default App;
+export default Home;
