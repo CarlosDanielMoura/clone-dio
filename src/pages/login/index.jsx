@@ -15,6 +15,8 @@ import {
     CriarAccountText,
 } from "./styles";
 
+import { Link } from "react-router-dom";
+
 const Login = () => {
     return (
         <Container>
@@ -49,12 +51,15 @@ const Login = () => {
                             variant="secundary"
                             title="Entrar"
                             type="submit"
+                            onClick={() => null}
                         />
                     </form>
 
                     <Row>
                         <EsqueciText>Esqueci minha senha</EsqueciText>
-                        <CriarAccountText>Criar conta</CriarAccountText>
+                        <Link to="/Cadastro">
+                            <CriarAccountText>Criar conta</CriarAccountText>
+                        </Link>
                     </Row>
                 </Containerleft>
             </Wrapper>

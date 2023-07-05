@@ -89,6 +89,11 @@ export const EsqueciText = styled.p`
     font-weight: 700;
     line-height: normal;
     margin-top: 44px;
+    &:hover {
+        cursor: pointer;
+        opacity: 0.6;
+        transition: ease-in-out 0.3s;
+    }
 `;
 export const CriarAccountText = styled.p`
     color: #23dd7a;
@@ -98,4 +103,9 @@ export const CriarAccountText = styled.p`
     font-weight: 700;
     line-height: normal;
     margin-top: 44px;
+    &:hover {
+        cursor: pointer;
+        opacity: 0.6;
+        transition: ease-in-out 0.3s;
+    }
 `;

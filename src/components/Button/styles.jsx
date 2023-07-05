@@ -11,6 +11,12 @@ export const ButtonContainer = styled.button`
     width: 100%;
     border: none;
 
+    &:hover {
+        cursor: pointer;
+        opacity: 0.6;
+        transition: ease-in-out 0.5s;
+    }
+
     ${({ variant }) =>
         variant !== "primary" &&
         css`

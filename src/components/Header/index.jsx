@@ -26,11 +26,12 @@ const Header = ({ pag }) => {
                     ) : null}
                 </Row>
                 <Row>
-                    <MenuRight href="#">Home</MenuRight>
+                    <Link to="/">
+                        <MenuRight href="#">Home</MenuRight>
+                    </Link>
                     <Link to="/login">
                         <Button title="Entrar" />
                     </Link>
-
                     <Link to="/cadastro">
                         <Button title="Cadastrar" />
                     </Link>
