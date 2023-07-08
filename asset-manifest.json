@@ -1,0 +1,14 @@
+{
+  "files": {
+    "main.js": "/clone-dio/static/js/main.26034084.js",
+    "static/media/banner-homer.png": "/clone-dio/static/media/banner-homer.a7c70a442a2b18b90137.png",
+    "static/media/banner_feed.png": "/clone-dio/static/media/banner_feed.14783d7829c9026df7e6.png",
+    "static/media/avatar.jpg": "/clone-dio/static/media/avatar.bfc17da77629690e01ba.jpg",
+    "static/media/Logo-dio.svg": "/clone-dio/static/media/Logo-dio.b737a2b5486e004ba4b0da954c3c849c.svg",
+    "index.html": "/clone-dio/index.html",
+    "main.26034084.js.map": "/clone-dio/static/js/main.26034084.js.map"
+  },
+  "entrypoints": [
+    "static/js/main.26034084.js"
+  ]
+}
