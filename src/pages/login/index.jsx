@@ -20,7 +20,7 @@ import { Link } from "react-router-dom";
 const Login = () => {
     return (
         <Container>
-            <Header pag="Home"></Header>
+            <Header />
 
             <Wrapper>
                 <ContainerRight>
@@ -47,12 +47,14 @@ const Login = () => {
                             leftIcon={<MdLock />}
                             name="senha"
                         />
-                        <Button
-                            variant="secundary"
-                            title="Entrar"
-                            type="submit"
-                            onClick={() => null}
-                        />
+                        <Link to="/feed">
+                            <Button
+                                variant="secundary"
+                                title="Entrar"
+                                type="submit"
+                                onClick={() => null}
+                            />
+                        </Link>
                     </form>
 
                     <Row>

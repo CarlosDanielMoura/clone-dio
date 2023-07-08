@@ -30,6 +30,15 @@ export const ContainerRight = styled.div`
         margin-top: 35px;
         margin-bottom: 27px;
     }
+
+    input::placeholder {
+        color: #fff;
+        font-family: "Open Sans", sans-serif;
+        font-size: 18px;
+        font-style: normal;
+        font-weight: 400;
+        line-height: normal;
+    }
 `;
 
 export const Paragraph = styled.p`

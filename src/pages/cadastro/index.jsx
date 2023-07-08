@@ -19,7 +19,7 @@ import {
 const Cadastro = () => {
     return (
         <Container>
-            <Header pag="Home" />
+            <Header autenticado={false} />
 
             <Wrapper>
                 <ContainerLeft>

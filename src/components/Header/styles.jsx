@@ -25,6 +25,11 @@ export const Row = styled.div`
     flex-direction: row;
     align-items: center;
     gap: 5px;
+
+    svg {
+        cursor: pointer;
+        margin-left: 5px;
+    }
 `;
 
 export const Column = styled.div`
@@ -78,4 +83,14 @@ export const Input = styled.input`
     &:focus {
         outline: none;
     }
+`;
+
+export const Text = styled.p`
+    color: #fff;
+    font-family: "Open Sans", sans-serif;
+    font-size: 18px;
+    font-style: normal;
+    font-weight: 700;
+    line-height: normal;
+    margin-left: 22px;
 `;
