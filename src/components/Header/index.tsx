@@ -18,14 +18,16 @@ import Avatar from "../Avatar";
 import ImgAvatar from "../../assets/avatar.jpg";
 
 import { BsChevronDown } from "react-icons/bs";
+import { useAuth } from "../../hooks/useAuth";
 
-const Header = ({ autenticado }) => {
+const Header = () => {
+    const { user, handleSignOut } = useAuth();
     return (
         <Wrapper>
             <Container>
                 <Row>
                     <UserPicture src={Logo} />
-                    {autenticado ? (
+                    {user.id ? (
                         <>
                             <BuscarInputContainer>
                                 <Input type="Text" placeholder="Buscar" />
@@ -36,10 +38,13 @@ const Header = ({ autenticado }) => {
                     ) : null}
                 </Row>
                 <Row>
-                    {autenticado ? (
+                    {user.id ? (
                         <Row>
                             <Avatar src={ImgAvatar} alt="imagem profile" />
                             <BsChevronDown />
+                            <a href="#" onClick={handleSignOut}>
+                                Sair
+                            </a>
                         </Row>
                     ) : (
                         <>

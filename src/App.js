@@ -4,17 +4,20 @@ import Home from "./pages/home";
 import Login from "./pages/login";
 import Cadastro from "./pages/cadastro";
 import { GlobalStyle } from "./styles/global";
+import { AuthContextProvider } from "./context/auth";
 
 function App() {
     return (
         <Router>
-            <GlobalStyle />
-            <Routes>
-                <Route path="/" element={<Home />} />
-                <Route path="/login" element={<Login />} />
-                <Route path="/feed" element={<Feed />} />
-                <Route path="/Cadastro" element={<Cadastro />}></Route>
-            </Routes>
+            <AuthContextProvider>
+                <GlobalStyle />
+                <Routes>
+                    <Route path="/" element={<Home />} />
+                    <Route path="/login" element={<Login />} />
+                    <Route path="/feed" element={<Feed />} />
+                    <Route path="/Cadastro" element={<Cadastro />}></Route>
+                </Routes>
+            </AuthContextProvider>
         </Router>
     );
 }

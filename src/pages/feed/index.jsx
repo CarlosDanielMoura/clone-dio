@@ -17,7 +17,7 @@ import ImgAvatar from "../../assets/avatar.jpg";
 const Feed = () => {
     return (
         <Container>
-            <Header autenticado={true} />
+            <Header />
             <Wrapper>
                 <Main>
                     <h1>Feed</h1>

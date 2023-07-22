@@ -1,6 +1,7 @@
 import { ButtonContainer } from "./styles";
+import { IButton } from "./types";
 
-const Button = ({ title, variant = "primary", onClick, type }) => {
+const Button = ({ title, variant = "primary", onClick, type }: IButton) => {
     return (
         <ButtonContainer variant={variant} onClick={onClick} type={type}>
             {title}

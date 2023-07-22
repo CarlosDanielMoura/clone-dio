@@ -1,7 +1,15 @@
+import { useForm } from "react-hook-form";
+import { yupResolver } from "@hookform/resolvers/yup";
+import * as yup from "yup";
+import { Link } from "react-router-dom";
+import { Flip, ToastContainer } from "react-toastify";
+
 import Header from "../../components/Header";
 import Input from "../../components/Input";
 import Button from "../../components/Button";
 import { MdEmail, MdLock } from "react-icons/md";
+import "react-toastify/dist/ReactToastify.css";
+
 import {
     Container,
     ContainerRight,
@@ -14,10 +22,42 @@ import {
     EsqueciText,
     CriarAccountText,
 } from "./styles";
-
-import { Link } from "react-router-dom";
+import { useAuth } from "../../hooks/useAuth";
 
 const Login = () => {
+    const { handleLogin } = useAuth();
+
+    const schema = yup
+        .object({
+            email: yup
+                .string()
+                .email("E-mail inválido")
+                .required("Digite um e-mail válido"),
+            password: yup
+                .string()
+                .min(6, "Senha curta, mínimo 6 caracteres")
+                .required("Mínimo 6 caracteres"),
+        })
+        .required();
+
+    const {
+        control,
+        handleSubmit,
+        formState: { errors },
+    } = useForm({
+        mode: "onBlur",
+        reValidateMode: "onBlur",
+        defaultValues: {
+            email: "",
+            password: "",
+        },
+        resolver: yupResolver(schema),
+    });
+
+    const onSubmit = async (formData) => {
+        handleLogin(formData);
+    };
+
     return (
         <Container>
             <Header />
@@ -34,27 +74,30 @@ const Login = () => {
                 <Containerleft>
                     <Title>Faça seu cadastro</Title>
                     <Paragraph>Faça seu login e make the change._</Paragraph>
-                    <form>
+                    <form onSubmit={handleSubmit(onSubmit)}>
                         <Input
-                            type="password"
-                            placeholder="Senha"
+                            type="text"
+                            placeholder="E-mail"
                             leftIcon={<MdEmail />}
-                            name="E-mail"
+                            name="email"
+                            control={control}
+                            errorMessage={errors.email?.message}
                         />
                         <Input
                             type="password"
                             placeholder="Senha"
                             leftIcon={<MdLock />}
-                            name="senha"
+                            name="password"
+                            control={control}
+                            errorMessage={errors.password?.message}
                         />
-                        <Link to="/feed">
-                            <Button
-                                variant="secundary"
-                                title="Entrar"
-                                type="submit"
-                                onClick={() => null}
-                            />
-                        </Link>
+                        <Button
+                            title="Entrar"
+                            variant="secondary"
+                            type="submit"
+                        />
+
+                        <ToastContainer autoClose={3000} transition={Flip} />
                     </form>
 
                     <Row>

@@ -14,7 +14,7 @@ import Banner from "../../assets/banner-homer.png";
 function Home() {
     return (
         <Container>
-            <Header autenticado={false} />
+            <Header />
             <Wrapper>
                 <ContainerLeft>
                     <Title>
